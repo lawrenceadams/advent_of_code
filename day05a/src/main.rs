@@ -2,7 +2,8 @@ use std::fs;
 
 fn main() {
     let f = fs::read_to_string("input.txt").unwrap();
-    let output = check_rules(rationalise_input(&*f).0, rationalise_input(&*f).1);
+    let (a, b) = rationalise_input(&*f);
+    let output = check_rules(a, b);
     let result: usize = output.iter().sum();
 
     dbg!(result);
