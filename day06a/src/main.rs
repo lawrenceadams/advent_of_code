@@ -73,8 +73,6 @@ fn distinct_positions(input: &str) -> usize {
 
     while active_grid.is_valid_position(active_grid.y_pos, active_grid.x_pos) {
         active_grid.update_cursor_value();
-        // println!("{active_grid}");
-        // dbg!(active_grid.y_pos, active_grid.x_pos);
 
         match active_grid.current_direction {
             Direction::UP => {
